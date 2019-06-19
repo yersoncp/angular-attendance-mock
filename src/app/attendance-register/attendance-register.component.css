@@ -1,0 +1,44 @@
+.wrapper {
+  background: rgb(59, 48, 155);
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.form {
+  padding-top: 8%;
+  text-align: center;
+}
+h2 {
+  color: #ffffff;
+  font-family: 'Arial';
+}
+input {
+  background: rgb(14, 39, 121);
+  border: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 10px;
+  width: 160px;
+  display: inline-block;
+  
+  vertical-align: top;
+  border-radius: 5px 0 0 5px;
+}
+input:hover {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+button {
+  border: none;
+  background: #0586db;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  padding: 11px 18px;
+}
+button img {
+  max-width: 24px;
+  height: auto;
+}
