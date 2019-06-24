@@ -1,7 +1,5 @@
 .wrapper {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 520px;
+  max-width:480px;
 }
 
 .wrapper__inner {
@@ -11,8 +9,8 @@
   border-radius: 5px;
   text-align: left;
   padding: 25px;
-  margin: 25px;
-  border-top: 5px solid rgb(11, 199, 74);
+  margin: 25px 0;
+  border-top: 5px solid #f36;
 }
 
 .grid {
