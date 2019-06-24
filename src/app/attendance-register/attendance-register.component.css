@@ -1,5 +1,5 @@
 .wrapper {
-  background: #222223;
+  background: #1b1b1b;
   margin: 0;
   position: absolute;
   height: 100%;
@@ -11,7 +11,7 @@
 
 .form__inner {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 3fr 4fr;
 }
 
 @media (max-width: 600px) {
@@ -41,7 +41,6 @@ h3 {
 
 h2 .hour {
   font-size: 8rem;
-  letter-spacing: -4px;
   font-weight: 600;
 }
 
@@ -90,3 +89,39 @@ button img {
   max-width: 24px;
   height: auto;
 }
+
+/**
+* Pulse
+**/
+.marker {
+  margin: 25% auto 0;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@-webkit-keyframes pulse {
+  0%  { -webkit-transform:scale(0.1,.1); opacity:0}
+  20% { opacity:1}
+  100%{-webkit-transform:scale(1.2, 1.2); opacity:0}
+}
+
+.marker [class*=pulse_] {
+  border: 3px solid #f36;
+  -webkit-border-radius: 50%;
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  -webkit-animation: pulse 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation: pulse 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;  
+}
+.marker [class*=pulse_].pulse_1 {
+  animation-delay: -.3s;
+  -webkit-animation-delay: -.3s;
+}
+

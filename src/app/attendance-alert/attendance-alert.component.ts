@@ -7,14 +7,17 @@ import { TrackingService } from '../tracking.service';
   styleUrls: ['./attendance-alert.component.css']
 })
 export class AttendanceAlertComponent implements OnInit {
-  public isActive: boolean = false;
+  public isShow: boolean = false;
+  public isSuccess: boolean = false;
+
   constructor(
     private trackingService: TrackingService
   ) { }
 
   ngOnInit() {
     this.trackingService.data$.subscribe(e => {
-      this.isActive = e.active;
+      this.isShow = e['active'];
+      this.isSuccess = true;
       this._hiddenMessage();
       console.log(e);
     })
@@ -22,7 +25,7 @@ export class AttendanceAlertComponent implements OnInit {
 
   private _hiddenMessage() {
     setTimeout(_ => {
-      this.isActive = false;
+      this.isShow = false;
     }, 2000);
   }
 
