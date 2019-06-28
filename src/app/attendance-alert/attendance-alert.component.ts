@@ -19,7 +19,6 @@ export class AttendanceAlertComponent implements OnInit {
       this.isShow = e['active'];
       this.isSuccess = true;
       this._hiddenMessage();
-      console.log(e);
     })
   }
 
